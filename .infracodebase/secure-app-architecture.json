@@ -1,0 +1,339 @@
+{
+  "name": "Secure Application Architecture - Next.js + Python + AI",
+  "nodes": [
+    {
+      "id": "route53",
+      "label": "Route 53",
+      "x": 640,
+      "y": 240,
+      "subtitle": "DNS Management",
+      "icon": "/icons/aws/network/route-53.png"
+    },
+    {
+      "id": "waf",
+      "label": "AWS WAF",
+      "x": 400,
+      "y": 520,
+      "subtitle": "Web Application Firewall",
+      "icon": "/icons/aws/security/waf.png"
+    },
+    {
+      "id": "shield",
+      "label": "AWS Shield",
+      "x": 880,
+      "y": 520,
+      "subtitle": "DDoS Protection",
+      "icon": "/icons/aws/security/shield.png"
+    },
+    {
+      "id": "igw",
+      "label": "Internet Gateway",
+      "x": 1300,
+      "y": 240,
+      "icon": "/icons/aws/network/internet-gateway.png"
+    },
+    {
+      "id": "vpc",
+      "label": "VPC",
+      "x": 640,
+      "y": 800,
+      "subtitle": "10.0.0.0/16",
+      "icon": "/icons/aws/network/vpc.png",
+      "type": "container",
+      "width": 1520,
+      "height": 940
+    },
+    {
+      "id": "public_subnet",
+      "label": "Public Subnet",
+      "x": 90,
+      "y": 90,
+      "subtitle": "10.0.1.0/24",
+      "icon": "/icons/aws/network/public-subnet.png",
+      "type": "container",
+      "width": 520,
+      "height": 330,
+      "parentId": "vpc"
+    },
+    {
+      "id": "private_subnet",
+      "label": "Private Subnet",
+      "x": 730,
+      "y": 90,
+      "subtitle": "10.0.2.0/24",
+      "icon": "/icons/aws/network/private-subnet.png",
+      "type": "container",
+      "width": 700,
+      "height": 760,
+      "parentId": "vpc"
+    },
+    {
+      "id": "alb",
+      "label": "Application Load Balancer",
+      "x": 90,
+      "y": 90,
+      "subtitle": "prod-alb",
+      "icon": "/icons/aws/network/elb-application-load-balancer.png",
+      "parentId": "public_subnet"
+    },
+    {
+      "id": "nat",
+      "label": "NAT Gateway",
+      "x": 310,
+      "y": 90,
+      "icon": "/icons/aws/network/nat-gateway.png",
+      "parentId": "public_subnet"
+    },
+    {
+      "id": "eks",
+      "label": "EKS Cluster",
+      "x": 90,
+      "y": 90,
+      "subtitle": "prod-eks-cluster",
+      "icon": "/icons/aws/compute/elastic-kubernetes-service.png",
+      "type": "container",
+      "width": 520,
+      "height": 580,
+      "parentId": "private_subnet"
+    },
+    {
+      "id": "frontend",
+      "label": "Next.js Frontend",
+      "x": 90,
+      "y": 90,
+      "subtitle": "frontend-deployment",
+      "icon": "/icons/k8s/ecosystem/helm.png",
+      "parentId": "eks"
+    },
+    {
+      "id": "backend",
+      "label": "Python Backend",
+      "x": 310,
+      "y": 90,
+      "subtitle": "backend-deployment",
+      "icon": "/icons/azure/ai/azure-openai.png",
+      "parentId": "eks"
+    },
+    {
+      "id": "argocd",
+      "label": "ArgoCD",
+      "x": 90,
+      "y": 340,
+      "subtitle": "GitOps Controller",
+      "icon": "/icons/onprem/gitops/argocd.png",
+      "parentId": "eks"
+    },
+    {
+      "id": "helm",
+      "label": "Helm",
+      "x": 310,
+      "y": 340,
+      "subtitle": "Package Manager",
+      "icon": "/icons/k8s/ecosystem/helm.png",
+      "parentId": "eks"
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "x": 2400,
+      "y": 1200,
+      "subtitle": "Primary Database",
+      "icon": "/icons/onprem/database/mongodb.png"
+    },
+    {
+      "id": "redis",
+      "label": "Redis Cache",
+      "x": 2400,
+      "y": 1500,
+      "subtitle": "Session & Cache",
+      "icon": "/icons/onprem/inmemory/redis.png"
+    },
+    {
+      "id": "jenkins",
+      "label": "Jenkins CI/CD",
+      "x": 0,
+      "y": 800,
+      "subtitle": "Build & Security Pipeline",
+      "icon": "/icons/onprem/ci/jenkins.png",
+      "type": "container",
+      "width": 520,
+      "height": 580
+    },
+    {
+      "id": "trivy",
+      "label": "Trivy",
+      "x": 90,
+      "y": 90,
+      "subtitle": "Container Scanning",
+      "icon": "/icons/onprem/security/trivy.png",
+      "parentId": "jenkins"
+    },
+    {
+      "id": "sonarqube",
+      "label": "SonarQube",
+      "x": 310,
+      "y": 90,
+      "subtitle": "Code Quality",
+      "icon": "/icons/saas/security/sonarqube.png",
+      "parentId": "jenkins"
+    },
+    {
+      "id": "owasp",
+      "label": "OWASP ZAP",
+      "x": 90,
+      "y": 340,
+      "subtitle": "Security Testing",
+      "icon": "/icons/aws/security/security-hub.png",
+      "parentId": "jenkins"
+    },
+    {
+      "id": "prometheus",
+      "label": "Prometheus",
+      "x": 2400,
+      "y": 800,
+      "subtitle": "Metrics Collection",
+      "icon": "/icons/onprem/monitoring/prometheus.png"
+    },
+    {
+      "id": "grafana",
+      "label": "Grafana",
+      "x": 2400,
+      "y": 520,
+      "subtitle": "Monitoring Dashboard",
+      "icon": "/icons/onprem/monitoring/grafana.png"
+    },
+    {
+      "id": "secrets",
+      "label": "Secrets Manager",
+      "x": 2400,
+      "y": 240,
+      "subtitle": "API Keys & Secrets",
+      "icon": "/icons/aws/security/secrets-manager.png"
+    },
+    {
+      "id": "kms",
+      "label": "KMS",
+      "x": 2700,
+      "y": 240,
+      "subtitle": "Encryption Keys",
+      "icon": "/icons/aws/security/key-management-service.png"
+    },
+    {
+      "id": "terraform",
+      "label": "Terraform",
+      "x": 0,
+      "y": 240,
+      "subtitle": "Infrastructure as Code",
+      "icon": "/icons/onprem/iac/terraform.png"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "route53",
+      "target": "waf",
+      "label": "HTTPS"
+    },
+    {
+      "id": "e2",
+      "source": "route53",
+      "target": "shield",
+      "label": "DDoS Protection"
+    },
+    {
+      "id": "e3",
+      "source": "waf",
+      "target": "alb",
+      "label": "Filtered Traffic"
+    },
+    {
+      "id": "e4",
+      "source": "shield",
+      "target": "alb"
+    },
+    {
+      "id": "e5",
+      "source": "igw",
+      "target": "public_subnet",
+      "label": "Internet Access"
+    },
+    {
+      "id": "e6",
+      "source": "alb",
+      "target": "frontend",
+      "label": "HTTP/2"
+    },
+    {
+      "id": "e7",
+      "source": "frontend",
+      "target": "backend",
+      "label": "API Calls"
+    },
+    {
+      "id": "e8",
+      "source": "backend",
+      "target": "mongodb",
+      "label": "Data Queries"
+    },
+    {
+      "id": "e9",
+      "source": "backend",
+      "target": "redis",
+      "label": "Cache"
+    },
+    {
+      "id": "e10",
+      "source": "jenkins",
+      "target": "argocd",
+      "label": "Deploy Manifest"
+    },
+    {
+      "id": "e11",
+      "source": "argocd",
+      "target": "eks",
+      "label": "Apply to Cluster"
+    },
+    {
+      "id": "e12",
+      "source": "prometheus",
+      "target": "eks",
+      "label": "Scrape Metrics"
+    },
+    {
+      "id": "e13",
+      "source": "grafana",
+      "target": "prometheus",
+      "label": "Query"
+    },
+    {
+      "id": "e14",
+      "source": "secrets",
+      "target": "backend",
+      "label": "OpenAI API Key"
+    },
+    {
+      "id": "e15",
+      "source": "kms",
+      "target": "eks",
+      "label": "Encrypt Secrets"
+    },
+    {
+      "id": "e16",
+      "source": "nat",
+      "target": "private_subnet",
+      "label": "Outbound Traffic"
+    },
+    {
+      "id": "e17",
+      "source": "terraform",
+      "target": "vpc",
+      "label": "Provisions"
+    },
+    {
+      "id": "e18",
+      "source": "terraform",
+      "target": "jenkins",
+      "label": "Configures"
+    }
+  ]
+}
