@@ -4,85 +4,85 @@
     {
       "id": "route53",
       "label": "Route 53",
-      "x": 640,
-      "y": 240,
       "subtitle": "DNS Management",
-      "icon": "/icons/aws/network/route-53.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/route-53.png",
+      "x": 1510,
+      "y": 0
     },
     {
       "id": "waf",
       "label": "AWS WAF",
-      "x": 400,
-      "y": 520,
       "subtitle": "Web Application Firewall",
-      "icon": "/icons/aws/security/waf.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/waf.png",
+      "x": 1290,
+      "y": 280
     },
     {
       "id": "shield",
       "label": "AWS Shield",
-      "x": 880,
-      "y": 520,
       "subtitle": "DDoS Protection",
-      "icon": "/icons/aws/security/shield.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/shield.png",
+      "x": 1510,
+      "y": 280
     },
     {
       "id": "igw",
       "label": "Internet Gateway",
-      "x": 1300,
-      "y": 240,
-      "icon": "/icons/aws/network/internet-gateway.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
+      "x": 1350,
+      "y": 560
     },
     {
       "id": "vpc",
       "label": "VPC",
-      "x": 640,
-      "y": 800,
+      "x": 1010,
+      "y": 840,
       "subtitle": "10.0.0.0/16",
-      "icon": "/icons/aws/network/vpc.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/vpc.png",
       "type": "container",
-      "width": 1520,
+      "width": 1500,
       "height": 940
     },
     {
       "id": "public_subnet",
       "label": "Public Subnet",
+      "subtitle": "10.0.1.0/24",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/public-subnet.png",
+      "type": "container",
       "x": 90,
       "y": 90,
-      "subtitle": "10.0.1.0/24",
-      "icon": "/icons/aws/network/public-subnet.png",
-      "type": "container",
       "width": 520,
       "height": 330,
       "parentId": "vpc"
     },
     {
-      "id": "private_subnet",
-      "label": "Private Subnet",
-      "x": 730,
-      "y": 90,
-      "subtitle": "10.0.2.0/24",
-      "icon": "/icons/aws/network/private-subnet.png",
-      "type": "container",
-      "width": 700,
-      "height": 760,
-      "parentId": "vpc"
-    },
-    {
       "id": "alb",
       "label": "Application Load Balancer",
+      "subtitle": "prod-alb",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/elb-application-load-balancer.png",
       "x": 90,
       "y": 90,
-      "subtitle": "prod-alb",
-      "icon": "/icons/aws/network/elb-application-load-balancer.png",
       "parentId": "public_subnet"
     },
     {
       "id": "nat",
       "label": "NAT Gateway",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/nat-gateway.png",
       "x": 310,
       "y": 90,
-      "icon": "/icons/aws/network/nat-gateway.png",
       "parentId": "public_subnet"
+    },
+    {
+      "id": "private_subnet",
+      "label": "Private Subnet",
+      "x": 710,
+      "y": 90,
+      "subtitle": "10.0.2.0/24",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/private-subnet.png",
+      "type": "container",
+      "width": 700,
+      "height": 760,
+      "parentId": "vpc"
     },
     {
       "id": "eks",
@@ -90,7 +90,7 @@
       "x": 90,
       "y": 90,
       "subtitle": "prod-eks-cluster",
-      "icon": "/icons/aws/compute/elastic-kubernetes-service.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/compute/elastic-kubernetes-service.png",
       "type": "container",
       "width": 520,
       "height": 580,
@@ -99,132 +99,132 @@
     {
       "id": "frontend",
       "label": "Next.js Frontend",
+      "subtitle": "frontend-deployment",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
       "x": 90,
       "y": 90,
-      "subtitle": "frontend-deployment",
-      "icon": "/icons/k8s/ecosystem/helm.png",
       "parentId": "eks"
     },
     {
       "id": "backend",
       "label": "Python Backend",
+      "subtitle": "backend-deployment",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/azure/ai/azure-openai.png",
       "x": 310,
       "y": 90,
-      "subtitle": "backend-deployment",
-      "icon": "/icons/azure/ai/azure-openai.png",
       "parentId": "eks"
     },
     {
       "id": "argocd",
       "label": "ArgoCD",
+      "subtitle": "GitOps Controller",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/gitops/argocd.png",
       "x": 90,
       "y": 340,
-      "subtitle": "GitOps Controller",
-      "icon": "/icons/onprem/gitops/argocd.png",
       "parentId": "eks"
     },
     {
       "id": "helm",
       "label": "Helm",
+      "subtitle": "Package Manager",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
       "x": 310,
       "y": 340,
-      "subtitle": "Package Manager",
-      "icon": "/icons/k8s/ecosystem/helm.png",
       "parentId": "eks"
     },
     {
       "id": "mongodb",
       "label": "MongoDB",
-      "x": 2400,
-      "y": 1200,
       "subtitle": "Primary Database",
-      "icon": "/icons/onprem/database/mongodb.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/database/mongodb.png",
+      "x": 2860,
+      "y": 1000
     },
     {
       "id": "redis",
       "label": "Redis Cache",
-      "x": 2400,
-      "y": 1500,
       "subtitle": "Session & Cache",
-      "icon": "/icons/onprem/inmemory/redis.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/inmemory/redis.png",
+      "x": 2860,
+      "y": 1300
     },
     {
       "id": "jenkins",
       "label": "Jenkins CI/CD",
-      "x": 0,
-      "y": 800,
       "subtitle": "Build & Security Pipeline",
-      "icon": "/icons/onprem/ci/jenkins.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/ci/jenkins.png",
       "type": "container",
+      "x": -198,
+      "y": 1760,
       "width": 520,
       "height": 580
     },
     {
       "id": "trivy",
       "label": "Trivy",
+      "subtitle": "Container Scanning",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/security/trivy.png",
       "x": 90,
       "y": 90,
-      "subtitle": "Container Scanning",
-      "icon": "/icons/onprem/security/trivy.png",
       "parentId": "jenkins"
     },
     {
       "id": "sonarqube",
       "label": "SonarQube",
+      "subtitle": "Code Quality",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/saas/security/sonarqube.png",
       "x": 310,
       "y": 90,
-      "subtitle": "Code Quality",
-      "icon": "/icons/saas/security/sonarqube.png",
       "parentId": "jenkins"
     },
     {
       "id": "owasp",
       "label": "OWASP ZAP",
+      "subtitle": "Security Testing",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/security-hub.png",
       "x": 90,
       "y": 340,
-      "subtitle": "Security Testing",
-      "icon": "/icons/aws/security/security-hub.png",
       "parentId": "jenkins"
     },
     {
       "id": "prometheus",
       "label": "Prometheus",
-      "x": 2400,
-      "y": 800,
       "subtitle": "Metrics Collection",
-      "icon": "/icons/onprem/monitoring/prometheus.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
+      "x": 2640,
+      "y": 1600
     },
     {
       "id": "grafana",
       "label": "Grafana",
-      "x": 2400,
-      "y": 520,
       "subtitle": "Monitoring Dashboard",
-      "icon": "/icons/onprem/monitoring/grafana.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
+      "x": 2640,
+      "y": 1900
     },
     {
       "id": "secrets",
       "label": "Secrets Manager",
-      "x": 2400,
-      "y": 240,
       "subtitle": "API Keys & Secrets",
-      "icon": "/icons/aws/security/secrets-manager.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/secrets-manager.png",
+      "x": 2640,
+      "y": 0
     },
     {
       "id": "kms",
       "label": "KMS",
-      "x": 2700,
-      "y": 240,
       "subtitle": "Encryption Keys",
-      "icon": "/icons/aws/security/key-management-service.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/key-management-service.png",
+      "x": 2860,
+      "y": 0
     },
     {
       "id": "terraform",
       "label": "Terraform",
-      "x": 0,
-      "y": 240,
       "subtitle": "Infrastructure as Code",
-      "icon": "/icons/onprem/iac/terraform.png"
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/iac/terraform.png",
+      "x": 0,
+      "y": 0
     }
   ],
   "edges": [
