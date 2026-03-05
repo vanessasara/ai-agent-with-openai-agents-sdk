@@ -6,16 +6,16 @@
       "label": "Route 53",
       "subtitle": "DNS Management",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/route-53.png",
-      "x": 1510,
-      "y": 0
+      "x": 1191,
+      "y": 71
     },
     {
       "id": "waf",
       "label": "AWS WAF",
       "subtitle": "Web Application Firewall",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/waf.png",
-      "x": 1290,
-      "y": 280
+      "x": 1053,
+      "y": 410
     },
     {
       "id": "shield",
@@ -23,25 +23,25 @@
       "subtitle": "DDoS Protection",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/shield.png",
       "x": 1510,
-      "y": 280
+      "y": 434
     },
     {
       "id": "igw",
       "label": "Internet Gateway",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
-      "x": 1350,
-      "y": 560
+      "x": 1243,
+      "y": 410
     },
     {
       "id": "vpc",
       "label": "VPC",
-      "x": 1010,
-      "y": 840,
       "subtitle": "10.0.0.0/16",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/vpc.png",
       "type": "container",
-      "width": 1500,
-      "height": 940
+      "x": 963,
+      "y": 647,
+      "width": 1751,
+      "height": 1186
     },
     {
       "id": "public_subnet",
@@ -50,7 +50,7 @@
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/public-subnet.png",
       "type": "container",
       "x": 90,
-      "y": 90,
+      "y": 436,
       "width": 520,
       "height": 330,
       "parentId": "vpc"
@@ -75,34 +75,34 @@
     {
       "id": "private_subnet",
       "label": "Private Subnet",
-      "x": 710,
-      "y": 90,
       "subtitle": "10.0.2.0/24",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/private-subnet.png",
       "type": "container",
-      "width": 700,
-      "height": 760,
+      "x": 770,
+      "y": 90,
+      "width": 891,
+      "height": 1006,
       "parentId": "vpc"
     },
     {
       "id": "eks",
       "label": "EKS Cluster",
-      "x": 90,
-      "y": 90,
       "subtitle": "prod-eks-cluster",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/compute/elastic-kubernetes-service.png",
       "type": "container",
-      "width": 520,
-      "height": 580,
+      "x": 90,
+      "y": 90,
+      "width": 711,
+      "height": 826,
       "parentId": "private_subnet"
     },
     {
       "id": "frontend",
       "label": "Next.js Frontend",
-      "subtitle": "frontend-deployment",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
       "x": 90,
-      "y": 90,
+      "y": 366,
+      "subtitle": "frontend-deployment",
+      "icon": "/icons/programming/framework/nextjs.png",
       "parentId": "eks"
     },
     {
@@ -110,7 +110,34 @@
       "label": "Python Backend",
       "subtitle": "backend-deployment",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/azure/ai/azure-openai.png",
-      "x": 310,
+      "x": 281,
+      "y": 366,
+      "parentId": "eks"
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "subtitle": "Primary Database",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/database/mongodb.png",
+      "x": 485,
+      "y": 486,
+      "parentId": "eks"
+    },
+    {
+      "id": "redis",
+      "label": "Redis Cache",
+      "subtitle": "Session & Cache",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/inmemory/redis.png",
+      "x": 501,
+      "y": 286,
+      "parentId": "eks"
+    },
+    {
+      "id": "secrets",
+      "label": "Secrets Manager",
+      "subtitle": "API Keys & Secrets",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/secrets-manager.png",
+      "x": 281,
       "y": 90,
       "parentId": "eks"
     },
@@ -119,34 +146,9 @@
       "label": "ArgoCD",
       "subtitle": "GitOps Controller",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/gitops/argocd.png",
-      "x": 90,
-      "y": 340,
+      "x": 236,
+      "y": 586,
       "parentId": "eks"
-    },
-    {
-      "id": "helm",
-      "label": "Helm",
-      "subtitle": "Package Manager",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
-      "x": 310,
-      "y": 340,
-      "parentId": "eks"
-    },
-    {
-      "id": "mongodb",
-      "label": "MongoDB",
-      "subtitle": "Primary Database",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/database/mongodb.png",
-      "x": 2860,
-      "y": 1000
-    },
-    {
-      "id": "redis",
-      "label": "Redis Cache",
-      "subtitle": "Session & Cache",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/inmemory/redis.png",
-      "x": 2860,
-      "y": 1300
     },
     {
       "id": "jenkins",
@@ -154,8 +156,8 @@
       "subtitle": "Build & Security Pipeline",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/ci/jenkins.png",
       "type": "container",
-      "x": -186,
-      "y": 1120,
+      "x": 308,
+      "y": 1313,
       "width": 520,
       "height": 580
     },
@@ -187,44 +189,44 @@
       "parentId": "jenkins"
     },
     {
+      "id": "helm",
+      "label": "Helm",
+      "subtitle": "Package Manager",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
+      "x": 3159,
+      "y": 1220
+    },
+    {
       "id": "prometheus",
       "label": "Prometheus",
       "subtitle": "Metrics Collection",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
-      "x": 2640,
-      "y": 1600
+      "x": 2997,
+      "y": 1058
     },
     {
       "id": "grafana",
       "label": "Grafana",
       "subtitle": "Monitoring Dashboard",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
-      "x": 2640,
-      "y": 1900
-    },
-    {
-      "id": "secrets",
-      "label": "Secrets Manager",
-      "subtitle": "API Keys & Secrets",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/secrets-manager.png",
-      "x": 2640,
-      "y": 0
+      "x": 2997,
+      "y": 1486
     },
     {
       "id": "kms",
       "label": "KMS",
       "subtitle": "Encryption Keys",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/key-management-service.png",
-      "x": 2860,
-      "y": 0
+      "x": 2953,
+      "y": 547
     },
     {
       "id": "terraform",
       "label": "Terraform",
       "subtitle": "Infrastructure as Code",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/iac/terraform.png",
-      "x": 0,
-      "y": 0
+      "x": 507,
+      "y": 602
     }
   ],
   "edges": [
@@ -291,7 +293,8 @@
       "id": "e11",
       "source": "argocd",
       "target": "eks",
-      "label": "Apply to Cluster"
+      "label": "Apply to Cluster",
+      "visible": false
     },
     {
       "id": "e12",
