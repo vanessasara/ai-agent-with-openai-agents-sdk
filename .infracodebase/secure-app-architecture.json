@@ -2,35 +2,49 @@
   "name": "Secure Application Architecture - Next.js + Python + AI",
   "nodes": [
     {
+      "id": "security_layer",
+      "label": "Security Layer",
+      "x": 1053,
+      "y": -13,
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/security-hub.png",
+      "type": "container",
+      "width": 740,
+      "height": 664
+    },
+    {
       "id": "route53",
       "label": "Route 53",
+      "x": 322,
+      "y": 90,
       "subtitle": "DNS Management",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/route-53.png",
-      "x": 1191,
-      "y": 71
+      "parentId": "security_layer"
     },
     {
       "id": "waf",
       "label": "AWS WAF",
+      "x": 90,
+      "y": 424,
       "subtitle": "Web Application Firewall",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/waf.png",
-      "x": 1053,
-      "y": 410
+      "parentId": "security_layer"
     },
     {
       "id": "shield",
       "label": "AWS Shield",
+      "x": 530,
+      "y": 424,
       "subtitle": "DDoS Protection",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/shield.png",
-      "x": 1510,
-      "y": 434
+      "parentId": "security_layer"
     },
     {
       "id": "igw",
       "label": "Internet Gateway",
+      "x": 310,
+      "y": 424,
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
-      "x": 1273,
-      "y": 410
+      "parentId": "security_layer"
     },
     {
       "id": "vpc",
@@ -151,28 +165,32 @@
       "parentId": "eks"
     },
     {
-      "id": "helm",
-      "label": "Helm",
-      "subtitle": "Package Manager",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
+      "id": "monitoring",
+      "label": "Monitoring",
       "x": 3379,
-      "y": 1209
+      "y": 938,
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/gcp/operations/monitoring.png",
+      "type": "container",
+      "width": 300,
+      "height": 580
     },
     {
       "id": "prometheus",
       "label": "Prometheus",
+      "x": 90,
+      "y": 90,
       "subtitle": "Metrics Collection",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
-      "x": 3557,
-      "y": 938
+      "parentId": "monitoring"
     },
     {
       "id": "grafana",
       "label": "Grafana",
+      "x": 90,
+      "y": 340,
       "subtitle": "Monitoring Dashboard",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
-      "x": 3557,
-      "y": 1509
+      "parentId": "monitoring"
     },
     {
       "id": "kms",
@@ -193,10 +211,10 @@
     {
       "id": "github_actions",
       "label": "GitHub Actions",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/vcs/github.png",
+      "type": "container",
       "x": 236,
       "y": 1369,
-      "icon": "/icons/onprem/vcs/github.png",
-      "type": "container",
       "width": 520,
       "height": 580
     },
@@ -204,7 +222,7 @@
       "id": "trivy",
       "label": "Trivy",
       "subtitle": "Container Scan",
-      "icon": "/icons/onprem/security/trivy.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/security/trivy.png",
       "x": 90,
       "y": 90,
       "parentId": "github_actions"
@@ -213,7 +231,7 @@
       "id": "owasp",
       "label": "OWASP ZAP",
       "subtitle": "Security Test",
-      "icon": "/icons/onprem/security/owasp.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/security/owasp.png",
       "x": 90,
       "y": 340,
       "parentId": "github_actions"
@@ -222,7 +240,7 @@
       "id": "sonarqube",
       "label": "SonarQube",
       "subtitle": "Code Quality",
-      "icon": "/icons/onprem/security/sonarqube.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/security/sonarqube.png",
       "x": 310,
       "y": 90,
       "parentId": "github_actions"
