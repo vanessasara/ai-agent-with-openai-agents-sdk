@@ -117,19 +117,19 @@
     {
       "id": "mongodb",
       "label": "MongoDB",
-      "x": 530,
-      "y": 486,
       "subtitle": "Primary Database",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/database/mongodb.png",
+      "x": 530,
+      "y": 486,
       "parentId": "eks"
     },
     {
       "id": "redis",
       "label": "Redis Cache",
-      "x": 530,
-      "y": 236,
       "subtitle": "Session & Cache",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/inmemory/redis.png",
+      "x": 530,
+      "y": 236,
       "parentId": "eks"
     },
     {
@@ -193,10 +193,10 @@
     {
       "id": "github_actions",
       "label": "GitHub Actions",
-      "icon": "/icons/onprem/ci/github-actions.png",
-      "type": "container",
       "x": 236,
       "y": 1369,
+      "icon": "/icons/onprem/vcs/github.png",
+      "type": "container",
       "width": 520,
       "height": 580
     },
