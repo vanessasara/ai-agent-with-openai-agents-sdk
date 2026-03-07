@@ -29,7 +29,7 @@
       "id": "igw",
       "label": "Internet Gateway",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
-      "x": 1243,
+      "x": 1273,
       "y": 410
     },
     {
@@ -38,10 +38,10 @@
       "subtitle": "10.0.0.0/16",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/vpc.png",
       "type": "container",
-      "x": 963,
-      "y": 647,
-      "width": 1751,
-      "height": 1186
+      "x": 997,
+      "y": 843,
+      "width": 1935,
+      "height": 1213
     },
     {
       "id": "public_subnet",
@@ -50,7 +50,7 @@
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/public-subnet.png",
       "type": "container",
       "x": 90,
-      "y": 436,
+      "y": 409,
       "width": 520,
       "height": 330,
       "parentId": "vpc"
@@ -78,10 +78,10 @@
       "subtitle": "10.0.2.0/24",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/private-subnet.png",
       "type": "container",
-      "x": 770,
+      "x": 925,
       "y": 90,
-      "width": 891,
-      "height": 1006,
+      "width": 920,
+      "height": 1033,
       "parentId": "vpc"
     },
     {
@@ -92,17 +92,17 @@
       "type": "container",
       "x": 90,
       "y": 90,
-      "width": 711,
-      "height": 826,
+      "width": 740,
+      "height": 853,
       "parentId": "private_subnet"
     },
     {
       "id": "frontend",
       "label": "Next.js Frontend",
-      "x": 90,
-      "y": 366,
       "subtitle": "frontend-deployment",
-      "icon": "/icons/programming/framework/nextjs.png",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/programming/framework/nextjs.png",
+      "x": 90,
+      "y": 363,
       "parentId": "eks"
     },
     {
@@ -110,26 +110,26 @@
       "label": "Python Backend",
       "subtitle": "backend-deployment",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/azure/ai/azure-openai.png",
-      "x": 281,
-      "y": 366,
+      "x": 310,
+      "y": 363,
       "parentId": "eks"
     },
     {
       "id": "mongodb",
       "label": "MongoDB",
+      "x": 530,
+      "y": 486,
       "subtitle": "Primary Database",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/database/mongodb.png",
-      "x": 485,
-      "y": 486,
       "parentId": "eks"
     },
     {
       "id": "redis",
       "label": "Redis Cache",
+      "x": 530,
+      "y": 236,
       "subtitle": "Session & Cache",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/inmemory/redis.png",
-      "x": 501,
-      "y": 286,
       "parentId": "eks"
     },
     {
@@ -147,70 +147,32 @@
       "subtitle": "GitOps Controller",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/gitops/argocd.png",
       "x": 236,
-      "y": 586,
+      "y": 613,
       "parentId": "eks"
-    },
-    {
-      "id": "jenkins",
-      "label": "Jenkins CI/CD",
-      "subtitle": "Build & Security Pipeline",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/ci/jenkins.png",
-      "type": "container",
-      "x": 308,
-      "y": 1313,
-      "width": 520,
-      "height": 580
-    },
-    {
-      "id": "trivy",
-      "label": "Trivy",
-      "subtitle": "Container Scanning",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/security/trivy.png",
-      "x": 90,
-      "y": 90,
-      "parentId": "jenkins"
-    },
-    {
-      "id": "sonarqube",
-      "label": "SonarQube",
-      "subtitle": "Code Quality",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/saas/security/sonarqube.png",
-      "x": 310,
-      "y": 90,
-      "parentId": "jenkins"
-    },
-    {
-      "id": "owasp",
-      "label": "OWASP ZAP",
-      "subtitle": "Security Testing",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/security-hub.png",
-      "x": 90,
-      "y": 340,
-      "parentId": "jenkins"
     },
     {
       "id": "helm",
       "label": "Helm",
       "subtitle": "Package Manager",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/k8s/ecosystem/helm.png",
-      "x": 3159,
-      "y": 1220
+      "x": 3379,
+      "y": 1209
     },
     {
       "id": "prometheus",
       "label": "Prometheus",
       "subtitle": "Metrics Collection",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
-      "x": 2997,
-      "y": 1058
+      "x": 3557,
+      "y": 938
     },
     {
       "id": "grafana",
       "label": "Grafana",
       "subtitle": "Monitoring Dashboard",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
-      "x": 2997,
-      "y": 1486
+      "x": 3557,
+      "y": 1509
     },
     {
       "id": "kms",
@@ -227,6 +189,43 @@
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/iac/terraform.png",
       "x": 507,
       "y": 602
+    },
+    {
+      "id": "github_actions",
+      "label": "GitHub Actions",
+      "icon": "/icons/onprem/ci/github-actions.png",
+      "type": "container",
+      "x": 236,
+      "y": 1369,
+      "width": 520,
+      "height": 580
+    },
+    {
+      "id": "trivy",
+      "label": "Trivy",
+      "subtitle": "Container Scan",
+      "icon": "/icons/onprem/security/trivy.png",
+      "x": 90,
+      "y": 90,
+      "parentId": "github_actions"
+    },
+    {
+      "id": "owasp",
+      "label": "OWASP ZAP",
+      "subtitle": "Security Test",
+      "icon": "/icons/onprem/security/owasp.png",
+      "x": 90,
+      "y": 340,
+      "parentId": "github_actions"
+    },
+    {
+      "id": "sonarqube",
+      "label": "SonarQube",
+      "subtitle": "Code Quality",
+      "icon": "/icons/onprem/security/sonarqube.png",
+      "x": 310,
+      "y": 90,
+      "parentId": "github_actions"
     }
   ],
   "edges": [
@@ -262,8 +261,10 @@
     {
       "id": "e6",
       "source": "alb",
-      "target": "frontend",
-      "label": "HTTP/2"
+      "target": "nat",
+      "label": "HTTP/2",
+      "sourceHandle": "right",
+      "targetHandle": "left"
     },
     {
       "id": "e7",
@@ -282,12 +283,6 @@
       "source": "backend",
       "target": "redis",
       "label": "Cache"
-    },
-    {
-      "id": "e10",
-      "source": "jenkins",
-      "target": "argocd",
-      "label": "Deploy Manifest"
     },
     {
       "id": "e11",
@@ -333,9 +328,15 @@
       "label": "Provisions"
     },
     {
+      "id": "e10",
+      "source": "github_actions",
+      "target": "argocd",
+      "label": "Deploy Manifest"
+    },
+    {
       "id": "e18",
       "source": "terraform",
-      "target": "jenkins",
+      "target": "github_actions",
       "label": "Configures"
     }
   ]
