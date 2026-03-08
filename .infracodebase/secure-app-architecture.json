@@ -2,60 +2,15 @@
   "name": "Secure Application Architecture - Next.js + Python + AI",
   "nodes": [
     {
-      "id": "security_layer",
-      "label": "Security Layer",
-      "x": 1053,
-      "y": -13,
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/security-hub.png",
-      "type": "container",
-      "width": 740,
-      "height": 664
-    },
-    {
-      "id": "route53",
-      "label": "Route 53",
-      "x": 322,
-      "y": 90,
-      "subtitle": "DNS Management",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/route-53.png",
-      "parentId": "security_layer"
-    },
-    {
-      "id": "waf",
-      "label": "AWS WAF",
-      "x": 90,
-      "y": 424,
-      "subtitle": "Web Application Firewall",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/waf.png",
-      "parentId": "security_layer"
-    },
-    {
-      "id": "shield",
-      "label": "AWS Shield",
-      "x": 530,
-      "y": 424,
-      "subtitle": "DDoS Protection",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/shield.png",
-      "parentId": "security_layer"
-    },
-    {
-      "id": "igw",
-      "label": "Internet Gateway",
-      "x": 310,
-      "y": 424,
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
-      "parentId": "security_layer"
-    },
-    {
       "id": "vpc",
       "label": "VPC",
       "subtitle": "10.0.0.0/16",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/vpc.png",
       "type": "container",
-      "x": 997,
-      "y": 843,
-      "width": 1935,
-      "height": 1213
+      "x": 571,
+      "y": -31,
+      "width": 1829,
+      "height": 1233
     },
     {
       "id": "public_subnet",
@@ -64,7 +19,7 @@
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/public-subnet.png",
       "type": "container",
       "x": 90,
-      "y": 409,
+      "y": 132,
       "width": 520,
       "height": 330,
       "parentId": "vpc"
@@ -92,10 +47,10 @@
       "subtitle": "10.0.2.0/24",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/private-subnet.png",
       "type": "container",
-      "x": 925,
+      "x": 819,
       "y": 90,
       "width": 920,
-      "height": 1033,
+      "height": 1053,
       "parentId": "vpc"
     },
     {
@@ -107,7 +62,7 @@
       "x": 90,
       "y": 90,
       "width": 740,
-      "height": 853,
+      "height": 873,
       "parentId": "private_subnet"
     },
     {
@@ -160,61 +115,17 @@
       "label": "ArgoCD",
       "subtitle": "GitOps Controller",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/gitops/argocd.png",
-      "x": 236,
-      "y": 613,
+      "x": 109,
+      "y": 633,
       "parentId": "eks"
-    },
-    {
-      "id": "monitoring",
-      "label": "Monitoring",
-      "x": 3379,
-      "y": 938,
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/gcp/operations/monitoring.png",
-      "type": "container",
-      "width": 300,
-      "height": 580
-    },
-    {
-      "id": "prometheus",
-      "label": "Prometheus",
-      "x": 90,
-      "y": 90,
-      "subtitle": "Metrics Collection",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
-      "parentId": "monitoring"
-    },
-    {
-      "id": "grafana",
-      "label": "Grafana",
-      "x": 90,
-      "y": 340,
-      "subtitle": "Monitoring Dashboard",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
-      "parentId": "monitoring"
-    },
-    {
-      "id": "kms",
-      "label": "KMS",
-      "subtitle": "Encryption Keys",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/key-management-service.png",
-      "x": 2953,
-      "y": 547
-    },
-    {
-      "id": "terraform",
-      "label": "Terraform",
-      "subtitle": "Infrastructure as Code",
-      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/iac/terraform.png",
-      "x": 507,
-      "y": 602
     },
     {
       "id": "github_actions",
       "label": "GitHub Actions",
       "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/vcs/github.png",
       "type": "container",
-      "x": 236,
-      "y": 1369,
+      "x": -253,
+      "y": 559,
       "width": 520,
       "height": 580
     },
@@ -244,6 +155,95 @@
       "x": 310,
       "y": 90,
       "parentId": "github_actions"
+    },
+    {
+      "id": "security_layer",
+      "label": "Security Layer",
+      "x": 571,
+      "y": -606,
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/security-hub.png",
+      "type": "container",
+      "width": 640,
+      "height": 556
+    },
+    {
+      "id": "route53",
+      "label": "Route 53",
+      "x": 190,
+      "y": 90,
+      "subtitle": "DNS Management",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/route-53.png",
+      "parentId": "security_layer"
+    },
+    {
+      "id": "waf",
+      "label": "AWS WAF",
+      "x": 90,
+      "y": 316,
+      "subtitle": "Web Application Firewall",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/waf.png",
+      "parentId": "security_layer"
+    },
+    {
+      "id": "shield",
+      "label": "AWS Shield",
+      "x": 430,
+      "y": 147,
+      "subtitle": "DDoS Protection",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/shield.png",
+      "parentId": "security_layer"
+    },
+    {
+      "id": "igw",
+      "label": "Internet Gateway",
+      "x": 290,
+      "y": 316,
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/network/internet-gateway.png",
+      "parentId": "security_layer"
+    },
+    {
+      "id": "monitoring",
+      "label": "Monitoring",
+      "x": 2652,
+      "y": 592,
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/gcp/operations/monitoring.png",
+      "type": "container",
+      "width": 300,
+      "height": 580
+    },
+    {
+      "id": "prometheus",
+      "label": "Prometheus",
+      "x": 90,
+      "y": 90,
+      "subtitle": "Metrics Collection",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/prometheus.png",
+      "parentId": "monitoring"
+    },
+    {
+      "id": "grafana",
+      "label": "Grafana",
+      "x": 90,
+      "y": 340,
+      "subtitle": "Monitoring Dashboard",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/monitoring/grafana.png",
+      "parentId": "monitoring"
+    },
+    {
+      "id": "kms",
+      "label": "KMS",
+      "subtitle": "Encryption Keys",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/aws/security/key-management-service.png",
+      "x": 2742,
+      "y": 385
+    },
+    {
+      "id": "terraform",
+      "label": "Terraform",
+      "subtitle": "Infrastructure as Code",
+      "icon": "https://fd-infracodebase-v2-static-prd-hvdmeqbraxfjhdb9.z01.azurefd.net/public/icons/onprem/iac/terraform.png",
+      "x": -11,
+      "y": 49
     }
   ],
   "edges": [
@@ -274,7 +274,9 @@
       "id": "e5",
       "source": "igw",
       "target": "public_subnet",
-      "label": "Internet Access"
+      "label": "Internet Access",
+      "sourceHandle": "top",
+      "targetHandle": "top"
     },
     {
       "id": "e6",
